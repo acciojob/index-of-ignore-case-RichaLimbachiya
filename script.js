@@ -1,4 +1,8 @@
-function indexOfIgnoreCase(str: string, subStr: string): number {
-    // Convert both strings to lowercase for case-insensitive comparison
-    return str.toLowerCase().indexOf(subStr.toLowerCase());
+function indexOfIgnoreCase(str, subStr) {
+  if (!str || !subStr) {
+    return -1;
+  }
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
+  return lowerStr.indexOf(lowerSubStr);
 }
